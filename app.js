@@ -51,7 +51,8 @@ class Metodo {
         if (elementoHTML.name === "borrar") {
             // Nos vamos al primer padre (tarjeta) y luego al segundo (el div del card)
             elementoHTML.parentElement.parentElement.parentElement.remove();
-            this.mostrarMsg("Product Deleted Succsssfully", "success");
+            // Mostramos el mensaje del producto borrado
+            this.mostrarMsg("Producto Borrado Exitosamente", "danger");
         }
     }
 
@@ -68,10 +69,10 @@ class Metodo {
         const contenedor = document.querySelector(".container");
         const app = document.querySelector("#App");
     
-        // Insert Message in the UI
+        // Insertamos el mensaje (el div antes del app)
         contenedor.insertBefore(div, app);
     
-        // Remove the Message after 3 seconds
+        // Quitamos el mensaje alerta luego de uns 3 segundos
         setTimeout(function () {
         document.querySelector(".alert").remove();
         }, 3000);
@@ -102,14 +103,14 @@ document.getElementById("Formulario-pro")
     const metodo = new Metodo();
 
     // Validación del los campos en el formulario
-    if (nombre === "" || descripcion === "" || categoria === "") {
-        ui.showMessage("Please Insert data in all fields", "danger");
+    if (nombre === "" || descripcion === "" || categoria === "" || precio === "" || año === "") {
+        return metodo.mostrarMsg("Por favor, complete todos los campos del formulario", "warning");
     }
 
     // Guargamos el producto
     metodo.añadirPro(producto);
     // Mostramos el mensaje de creación exitosa
-    metodo.mostrarMsg("Product Added Successfully", "success");
+    metodo.mostrarMsg("Producto Agregado Exitosamente", "success");
     // Reseteamos el producto
     metodo.resetearForm();
 });
