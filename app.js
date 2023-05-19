@@ -31,8 +31,8 @@ class Metodo {
                         <strong>Categoría</strong>: ${producto.categoria} -
                         <strong>Precio</strong>: ${producto.precio} $ - 
                         <strong>Año</strong>: ${producto.año}
-                        <a href="#" class="btn btn-warning" name="edit">Editar</a>
-                        <a href="#" class="btn btn-danger" name="delete">Delete</a>
+                        <a href="#" class="btn btn-warning" name="editar">Editar</a>
+                        <a href="#" class="btn btn-danger" name="borrar">Delete</a>
                     </div>
                 </div>
             `;
@@ -46,13 +46,35 @@ class Metodo {
     }
 
     // Eliminar un producto
-    eliminarPro(){
-
+    eliminarPro(elementoHTML){
+        // Comprobamos que el enlace selecionado sea el de borrar y no el de editar (name)
+        if (elementoHTML.name === "borrar") {
+            // Nos vamos al primer padre (tarjeta) y luego al segundo (el div del card)
+            elementoHTML.parentElement.parentElement.parentElement.remove();
+            this.mostrarMsg("Product Deleted Succsssfully", "success");
+        }
     }
 
     // Mensajes para mantener informado al usuario
-    mostrarMsg(){
-
+    mostrarMsg(mensaje, color){
+        // Creamos un div
+        const div = document.createElement("div");
+        // Le damos la clase al div
+        div.className = `alert alert-${color} mt-2`;
+        // Le agregamos el mensaje (apendchild - vreatetextnode)
+        div.appendChild(document.createTextNode(mensaje));
+    
+        // Mostramos el mensaje en pantalla (sleccionamos el contenedor)
+        const contenedor = document.querySelector(".container");
+        const app = document.querySelector("#App");
+    
+        // Insert Message in the UI
+        contenedor.insertBefore(div, app);
+    
+        // Remove the Message after 3 seconds
+        setTimeout(function () {
+        document.querySelector(".alert").remove();
+        }, 3000);
     }
 }
 
@@ -77,21 +99,25 @@ document.getElementById("Formulario-pro")
     const producto = new Producto(nombre, descripcion, categoria, precio, año);
 
     // Creamos la instancia de un nuevo metodo
-    const Metodo = new Metodo();
+    const metodo = new Metodo();
 
-    // Input User Validation
+    // Validación del los campos en el formulario
     if (nombre === "" || descripcion === "" || categoria === "") {
         ui.showMessage("Please Insert data in all fields", "danger");
     }
 
-    // Save Product
-    ui.addProduct(producto);
-    ui.showMessage("Product Added Successfully", "success");
-    ui.resetForm();
-  });
+    // Guargamos el producto
+    metodo.añadirPro(producto);
+    // Mostramos el mensaje de creación exitosa
+    metodo.mostrarMsg("Product Added Successfully", "success");
+    // Reseteamos el producto
+    metodo.resetearForm();
+});
 
-document.getElementById("product-list").addEventListener("click", (e) => {
-  const ui = new UI();
-  ui.deleteProduct(e.target);
-  e.preventDefault();
+  // Capturamos el evento de click en el boton de eliminar 
+document.getElementById("lista-Productos").addEventListener("click", (e) => {
+    const metodo = new Metodo();
+    // Nos aseguramos de que se haya dado click al enlace
+    metodo.eliminarPro(e.target);
+    e.preventDefault();
 });
