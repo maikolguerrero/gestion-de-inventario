@@ -1,3 +1,4 @@
+/** Configuracion del icono en el formulario*/
 .select-arrow {
     position: absolute;
     top: 50%;
@@ -5,3 +6,9 @@
     transform: translateY(-50%);
     pointer-events: none;
 }
+
+/** Configuracion largo del textarea*/
+.textarea{
+    max-height: 300px;
+}
+
