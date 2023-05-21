@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="styles.css">
     <!--Iconos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--Fuente Open Sasn-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Gestion de Inventario</title>
 </head>
 <body>
@@ -32,10 +36,6 @@
                         <a class="nav-link" href="#">Categorias</a>
                     </li>
                 </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-primary" type="submit">Buscar</button>
-            </form>
             </div>
         </div>
     </nav>
@@ -67,12 +67,12 @@
                     <div class="position-relative">
                     <select class="form-control" id="categoria">
                         <option value="" disabled selected>Categorías</option>
-                        <option value="opcion1">Laptos</option>
-                        <option value="opcion2">PC Escritorio</option>
-                        <option value="opcion3">Teclados</option>
-                        <option value="opcion4">Mouses</option>
-                        <option value="opcion4">Impresoras</option>
-                        <option value="opcion4">Otro</option>                            
+                        <option value="Laptos">Laptos</option>
+                        <option value="PC Escritorio">PC Escritorio</option>
+                        <option value="Teclados">Teclados</option>
+                        <option value="Mouses">Mouses</option>
+                        <option value="Impresoras">Impresoras</option>
+                        <option value="Otro">Otro</option>                            
                     </select>
                     <i class="select-arrow fas fa-chevron-down"></i>
                     </div>
@@ -95,9 +95,31 @@
         </div>
 
         <!-- Lista de productos agregados dinámicamente -->
-        <div id="lista-Productos" class="col-md-8"></div>
-        </div>
-    </div>
+        <div class="col-md-8">
+            <!-- Barra de navegación -->
+            <form class="pb-4" role="search">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" />
+                    <button class="btn btn-outline-primary rounded-end" type="submit">Buscar</button>
+                <div class="input-group-append ms-2">
+                    <div class="position-relative">
+                        <select class="form-control rounded-start" id="categoria">
+                            <option value="" disabled selected>Categorías</option>
+                            <option value="Laptos">Laptos</option>
+                            <option value="PC Escritorio">PC Escritorio</option>
+                            <option value="Teclados">Teclados</option>
+                            <option value="Mouses">Mouses</option>
+                            <option value="Impresoras">Impresoras</option>
+                            <option value="Otro">Otro</option>
+                    </select>
+                        <i class="select-arrow fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                </div>
+            </form>
+            <!-- Tarjetas con los productos -->
+            <div id="lista-Productos" class="col-md-8"></div>
+        </div>  
 
     <!--Configuración Javascript Local-->
     <script src="/app.js"></script>
