@@ -1,0 +1,18 @@
+/** Configuracion del icono en el formulario*/
+.select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/** Configuracion largo del textarea*/
+.textarea{
+    max-height: 300px;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
