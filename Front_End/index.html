@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="sass/custom.css">
+
+<body class="bg-light">
+
+  <header class="container-fluid vw-100 d-flex bg-dark">
+    <h1 class="text-light col-xl-4 d-flex justify-content-center align-items-center">RedSack</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark col-xl-8">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active fs-4" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-4" href="" data-bs-toggle="modal" data-bs-target="#inventario-modal">Inventario</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-4" href="" data-bs-toggle="modal" data-bs-target="#agregar-modal">Agregar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-4" href="#contactos">Contactos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container-fluid">
+
+    <section class="d-flex container-fluid vh-100">
+      <div class="d-flex flex-column justify-content-center h-100 col-7">
+        <h1 class="display-1 fw-bold mb-5 col-10">
+          Administra los recursos de tu empresa, en la <span class="text-primary">RedSack</span>
+        </h1>
+        <p class="fs-3 text-secondary fw-bold col-9 mb-4">
+          Te ofrecemos un sistema de gestión de inventario fácil de usar, para controlar todos tus bienes, materiales, recursos, entre otros, de tu empresa
+        </p>
+        <div class="d-flex gap-4 align-items-center">
+          <button type="button" class="btn btn-primary">¡Comienza Ya!</button>
+          <button type="button" class="btn btn-primary">Contáctanos...</button>
+          <span class="fs-4 text-secondary "><-- Visita nuestros...</span>
+        </div>
+      </div>
+
+      <div class=" col-5 h-100 d-flex justify-content-center align-items-center">
+        <img class="img-fluid" src="/public/Logo.png" alt="Imagen de muestra">
+      </div>
+    </section>
+
+    <section class="container-fluid" id="contactos">
+      <h2 class="text-center display-4 fw-bold text-primary mb-5">
+        CONTÁCTANOS
+      </h2>
+      <div class="container">
+        <div class="row">
+
+          <div class="d-flex flex-column gap-3 col text-center align-items-center m-4">
+            <h3 class="fw-bold fs-3">Anggelo Huz</h3>
+            <img src="/public/anggelo.jpg" class="img-thumbnail" alt="..." style="height: 200px; width: 200px;">
+            <p class="fs-5">Desarrollador</p>
+          </div>
+          
+          <div class="d-flex flex-column gap-3 col text-center align-items-center m-4">
+            <h3 class="fw-bold fs-3">Maikol Guerrero</h3>
+            <img src="/public/anggelo.jpg" class="img-thumbnail" alt="..." style="height: 200px; width: 200px;">
+            <p class="fs-5">Desarrollador</p>
+          </div>
+
+          <div class="d-flex flex-column gap-3 col text-center align-items-center m-4">
+            <h3 class="fw-bold fs-3">Gabriela Fernández</h3>
+            <img src="/public/anggelo.jpg" class="img-thumbnail" alt="..." style="height: 200px; width: 200px;">
+            <p class="fs-5">Desarrollador</p>
+          </div>
+          
+          <div class="d-flex flex-column gap-3 col text-center align-items-center m-4">
+            <h3 class="fw-bold fs-3">Francisco Uzcátegui</h3>
+            <img src="/public/anggelo.jpg" class="img-thumbnail" alt="..." style="height: 200px; width: 200px;">
+            <p class="fs-5">Desarrollador</p>
+          </div>
+    
+    
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Modal Inventario-->
+    <section class="modal fade modal-xl" id="inventario-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="text-center text-dark p-3 modal-title">Inventario</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000000">
+                  <h1 class="text-center text-dark p-3 mb-3">Productos</h1>
+        
+                    <div class="container p-3 bg-cyan border border-3 border-dark rounded-3 bg-white">
+                      
+                      <div class="container-fluid mt-4 mb-4 d-flex">
+                        <form class="d-flex col-xl-4" role="search">
+                          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                          <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
+        
+                        <div class="col-xl-8 d.flex justify-content-center container-fluid">
+                          <form class="d-flex" role="search-2">
+                            <input class="form-control me-2" type="search-2" placeholder="Filtrado" aria-label="Filtrado">
+                            <select class="form-select form-select-lg me-2" aria-label="Ejemplo de .form-select-lg">
+                              <option selected>Filtra la lista</option>
+                              <option value="Nombre">Nombre</option>
+                              <option value="Calidad">Calidad</option>
+                              <option value="Provedor">Provedor</option>
+                            </select>
+                            <button class="btn btn-outline-success" type="submit">Filtrar</button>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="container max-vh-100">
+                        <table class="table table-dark table-striped text-center border border-3 border-dark">
+                          <thead>
+                            <tr>
+                              <th scope="col">ID</th>
+                              <th scope="col">NOMBRE</th>
+                              <th scope="col">CATEGORÍA</th>
+                              <th scope="col">PRECIO</th>
+                              <th scope="col">OPCIONES</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                              <td>
+                                <div class="text-center">
+                                  <button type="button" class="btn btn-outline-warning me-3"><ion-icon
+                                      name="create-outline"></ion-icon>
+                                    Edit
+                                  </button>
+                                  <button type="button" class="btn btn-outline-danger me-3"><ion-icon
+                                      name="trash-outline"></ion-icon>
+                                    Delete
+                                  </button>
+                                  <button type="button" class="btn btn-outline-info "><ion-icon name="documents-outline"></ion-icon>
+                                    Mostrar Más...
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+        
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+        
+                <div class="carousel-item">
+                  <h1 class="text-center text-dark p-3 mb-3" data-bs-interval="10000000">Categorías</h1>
+        
+                    <div class="container p-3 bg-cyan border border-3 border-dark rounded-3 bg-white">
+                      <div class="container-fluid mt-4 mb-4 d-flex">
+                        <form class="d-flex col-xl-4" role="search">
+                          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                          <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
+        
+                        <div class="col-xl-8 d.flex justify-content-center container-fluid">
+                          <form class="d-flex" role="search-2">
+                            <input class="form-control me-2" type="search-2" placeholder="Filtrado" aria-label="Filtrado">
+                            <select class="form-select form-select-lg me-2" aria-label="Ejemplo de .form-select-lg">
+                              <option selected>Filtra la lista</option>
+                              <option value="Nombre">Nombre</option>
+                              <option value="Calidad">Calidad</option>
+                              <option value="Provedor">Provedor</option>
+                            </select>
+                            <button class="btn btn-outline-success" type="submit">Filtrar</button>
+                          </form>
+                        </div>
+                      </div>
+        
+                      <div class="container max-vh-100">
+                        <table class="table table-dark table-striped text-center border border-3 border-dark">
+                          <thead>
+                            <tr>
+                              <th scope="col">ID</th>
+                              <th scope="col">NOMBRE</th>
+                              <th scope="col">PROVEDOR</th>
+                              <th scope="col">CALIDAD</th>
+                              <th scope="col">OPCIONES</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                              <td>
+                                <div class="text-center">
+                                  <button type="button" class="btn btn-outline-warning me-3"><ion-icon
+                                    name="create-outline"></ion-icon>
+                                  Edit
+                                </button>
+                                <button type="button" class="btn btn-outline-danger me-3"><ion-icon
+                                    name="trash-outline"></ion-icon>
+                                  Delete
+                                </button>
+                                <button type="button" class="btn btn-outline-info "><ion-icon name="documents-outline"></ion-icon>
+                                  Mostrar Más...
+                                </button>
+                                </div>
+                              </td>
+                            </tr>
+        
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+              </div>
+        
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-outline-dark" data-bs-target="#carouselExampleControls"
+              data-bs-slide="next">Cambiar Inventario</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Agregar-->
+    <section class="modal fade modal-xl " id="agregar-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="text-center text-dark p-3 modal-title">Agregar</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container p-3 bg-$cyan border border-3 border-dark rounded-3 bg-white">
+
+              <div id="formularios" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <form class="row g-3 p-4">
+                      <h2 class="text-dark text-center">Productos</h2>
+                      <div class="col-md-6">
+                        <label for="nombre-producto" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre-producto" placeholder="Nombre del Producto...">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="categoria" class="form-label">Categoría</label>
+                        <input type="text" class="form-control" id="categoria" placeholder="Nombre de la Categoria...">
+                      </div>
+                      <div class="col-12">
+                        <label for="presentacion" class="form-label">Presentación</label>
+                        <input type="text" class="form-control" id="presentacion" placeholder="Ejemplo: 500ml">
+                      </div>
+                      <div class="col-12">
+                        <label for="descripcion" class="form-label">Descripción</label>
+                        <textarea type="text" class="form-control" id="descripcion"
+                          placeholder="Descripción..."></textarea>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="precio" class="form-label">Precio</label>
+                        <input type="number" min="0" class="form-control" id="precio" placeholder="0">
+                      </div>
+                      <div class="col-md-4">
+                        <label for="moneda" class="form-label">Moneda</label>
+                        <select id="moneda" class="form-select">
+                          <option selected>$</option>
+                          <option>Bs</option>
+                        </select>
+                      </div>
+                      <div class="col-md-2">
+                        <label for="cantidad" class="form-label">Cantidad</label>
+                        <input type="number" min="0" class="form-control" id="cantidad" placeholder="0">
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div class="carousel-item">
+                    <form class="row g-3 p-4">
+                      <h2 class="text-dark text-center">Categorías</h2>
+                      <div class="col-md-6">
+                        <label for="nombre-categoria" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre-categoria" placeholder="Ingrese el Nombre">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="provedor" class="form-label">Provedor</label>
+                        <input type="text" class="form-control" id="provedor" placeholder="Ejemplo: Samsung">
+                      </div>
+                      <div class="col-12">
+                        <label for="calidad" class="form-label">Calidad</label>
+                        <input type="text" class="form-control" id="calidad" placeholder="Calidad de los productos...">
+                      </div>
+                      <div class="col-12">
+                        <label for="descripcion" class="form-label">Descripción</label>
+                        <textarea type="text" class="form-control" id="descripcion"
+                          placeholder="Descripción..."></textarea>
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-outline-dark" data-bs-target="#formularios"
+                data-bs-slide="next">Cambiar Formulario</button>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <footer class="w-100 bg-dark p-4 ">
+    <p class="fs-4 tw-bold text-center m-0 text-light">Copyright © 22/05/2023 | Derechos reservados para RedSack | Visita el repositorio del Proyecto <a href="">Aquí</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
