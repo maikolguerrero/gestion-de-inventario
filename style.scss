@@ -1,0 +1,13 @@
+$primary: #BF1304;
+$secondary: #F29F05;
+$black: #260101;
+
+.body {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.titulos {
+    font-family: 'Montserrat', 'Open Sans', sans-serif !important;;
+}
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss"
