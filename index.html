@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>RedSack</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,11 +14,14 @@
 <body class="bg-light body">
 
   <header class="container-fluid vw-100 d-flex bg-dark">
-    <h1 class="text-light fw-bold col-lg-4 col-md-8 col-sm-6 col-5 d-flex justify-content-center align-items-center titulos">RedSack</h1>
+    <h1
+      class="text-light fw-bold col-lg-4 col-md-8 col-sm-6 col-5 d-flex justify-content-center align-items-center titulos">
+      RedSack</h1>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark col-lg-8 col-md-4 col-sm-6 col-7 text-center">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
@@ -49,11 +52,14 @@
           Administra los recursos de tu empresa, en la <span class="text-primary titulos">RedSack</span>
         </h1>
         <p class="fs-3 text-secondary fw-bold col-9 mb-4">
-          Te ofrecemos un sistema de gestión de inventario fácil de usar, para controlar todos tus bienes, materiales, recursos, entre otros, de tu empresa
+          Te ofrecemos un sistema de gestión de inventario fácil de usar, para controlar todos tus bienes, materiales,
+          recursos, entre otros, de tu empresa
         </p>
         <div class="d-flex gap-4 align-items-center">
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregar-modal">¡Comienza Ya!</button>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inventario-modal">Consulta...</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregar-modal" id="a-agregar-modal">¡Comienza
+            Ya!</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#inventario-modal">Consulta...</button>
         </div>
       </div>
 
@@ -67,35 +73,45 @@
         CONTÁCTANOS
       </h2>
       <div class="container-fluid d-flex flex-wrap">
-          <div class="d-flex flex-column col-12 col-md-6 col-xl-3 justify-content-center gap-3 text-center align-items-center p-4">
-            <h3 class="fw-bold fs-3">Anggelo H.</h3>
-            <img src="public/anggelo.jpg" class="img-thumbnail rounded-circle border-secondary" alt="..." style="height: 200px; width: 200px;">
-            <a class="fs-5 nav-link text-primary titulos" href="https://github.com/AnggeloHuz"><b>Desarrollador</b></a>
-          </div>
-          
-          <div class="d-flex flex-column col-12 col-md-6 col-xl-3 justify-content-center gap-3 text-center align-items-center p-4">
-            <h3 class="fw-bold fs-3">Maikol G.</h3>
-            <img src="public/Maikol.jpg" class="img-thumbnail rounded-circle border-secondary" alt="..." style="height: 200px; width: 200px;">
-            <a class="fs-5 nav-link text-primary titulos" href="https://github.com/maikolguerrero"><b>Desarrollador</b></a>
-          </div>
+        <div
+          class="d-flex flex-column col-12 col-md-6 col-xl-3 justify-content-center gap-3 text-center align-items-center p-4">
+          <h3 class="fw-bold fs-3">Anggelo H.</h3>
+          <img src="public/anggelo.jpg" class="img-thumbnail rounded-circle border-secondary" alt="..."
+            style="height: 200px; width: 200px;">
+          <a class="fs-5 nav-link text-primary titulos" href="https://github.com/AnggeloHuz"><b>Desarrollador</b></a>
+        </div>
 
-          <div class="d-flex flex-column col-12 col-md-6 col-xl-3 justify-content-center gap-3 text-center align-items-center p-4">
-            <h3 class="fw-bold fs-3">Gabriela F.</h3>
-            <img src="public/Gabriela.jpg" class="img-thumbnail rounded-circle border-secondary" alt="..." style="height: 200px; width: 200px;">
-            <a class="fs-5 nav-link text-primary titulos" href=""><b>Desarrollador</b></a>
-          </div>
-          
-          <div class="d-flex flex-column col-12 col-md-6 col-xl-3 justify-content-center gap-3 text-center align-items-center p-4">
-            <h3 class="fw-bold fs-3">Francisco U.</h3>
-            <img src="public/Francisco.jpg" class="img-thumbnail rounded-circle border-secondary" alt="..." style="height: 200px; width: 200px;">
-            <a class="fs-5 nav-link text-primary titulos" href="https://github.com/Fran-JF"><b>Desarrollador</b></a>
-          </div>
+        <div
+          class="d-flex flex-column col-12 col-md-6 col-xl-3 justify-content-center gap-3 text-center align-items-center p-4">
+          <h3 class="fw-bold fs-3">Maikol G.</h3>
+          <img src="public/Maikol.jpg" class="img-thumbnail rounded-circle border-secondary" alt="..."
+            style="height: 200px; width: 200px;">
+          <a class="fs-5 nav-link text-primary titulos"
+            href="https://github.com/maikolguerrero"><b>Desarrollador</b></a>
+        </div>
+
+        <div
+          class="d-flex flex-column col-12 col-md-6 col-xl-3 justify-content-center gap-3 text-center align-items-center p-4">
+          <h3 class="fw-bold fs-3">Gabriela F.</h3>
+          <img src="public/Gabriela.jpg" class="img-thumbnail rounded-circle border-secondary" alt="..."
+            style="height: 200px; width: 200px;">
+          <a class="fs-5 nav-link text-primary titulos" href="https://github.com/Gabriela26488"><b>Desarrollador</b></a>
+        </div>
+
+        <div
+          class="d-flex flex-column col-12 col-md-6 col-xl-3 justify-content-center gap-3 text-center align-items-center p-4">
+          <h3 class="fw-bold fs-3">Francisco U.</h3>
+          <img src="public/Francisco.jpg" class="img-thumbnail rounded-circle border-secondary" alt="..."
+            style="height: 200px; width: 200px;">
+          <a class="fs-5 nav-link text-primary titulos" href="https://github.com/Fran-JF"><b>Desarrollador</b></a>
+        </div>
       </div>
     </section>
-    
+
 
     <!-- Modal Inventario-->
-    <section class="modal fade modal-xl" id="inventario-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <section class="modal fade modal-xl" id="inventario-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
       <div class="modal-dialog modal-fullscreen-lg-down">
         <div class="modal-content">
           <div class="modal-header">
@@ -107,119 +123,62 @@
               <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="10000000">
                   <h1 class="text-center text-dark p-3 mb-3">Productos</h1>
-        
-                    <div class="container p-3 bg-cyan border border-3 border-dark rounded-3 bg-white">
-                      
-                      <div class="container-fluid mt-4 mb-3 gap-3 d-flex flex-column flex-md-row">
-                        <form class="d-flex col-md-6 col-12" role="search">
-                          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                          <button class="btn btn-outline-success" type="submit">Buscar</button>
+
+                  <div class="container p-3 bg-cyan border border-3 border-dark rounded-3 bg-white">
+
+                    <div id="tabla-productos"></div>
+                    <div id="alerta-container-inventario-producto"></div>
+
+                    <!-- <div class="container-fluid mt-4 mb-3 gap-3 d-flex flex-column flex-md-row">
+                      <form class="d-flex col-md-6 col-12" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                      </form>
+
+                      <div class="col-md-5 col-12 d.flex justify-content-center">
+                        <form class="d-flex" role="search-2">
+                          <select class="form-select form-select-lg me-2" aria-label="Ejemplo de .form-select-md">
+                            <option selected>Filtra la lista</option>
+                            <option value="Nombre">Nombre</option>
+                            <option value="Calidad">Calidad</option>
+                            <option value="Provedor">Provedor</option>
+                          </select>
+                          <button class="btn btn-outline-success" type="submit">Filtrar</button>
                         </form>
-        
-                        <div class="col-md-5 col-12 d.flex justify-content-center">
-                          <form class="d-flex" role="search-2">
-                            <select class="form-select form-select-lg me-2" aria-label="Ejemplo de .form-select-md">
-                              <option selected>Filtra la lista</option>
-                              <option value="Nombre">Nombre</option>
-                              <option value="Calidad">Calidad</option>
-                              <option value="Provedor">Provedor</option>
-                            </select>
-                            <button class="btn btn-outline-success" type="submit">Filtrar</button>
-                          </form>
-                        </div>
-                      </div>
-
-                      <div class="container-fluid mb-4 col-12 gap-4">
-                        <div class="">
-                          <label for="formFile" class="form-label">Importar Respaldos</label>
-                          <input class="form-control" type="file" id="formFile">
-                        </div>
-
-                        <div class="mt-4">
-                          <button class="btn btn-primary" id="exportar-1">Exportar Lista</button>
-                        </div>
-                      </div>
-
-                      <div class="container max-vh-100">
-                        <table class="table table-dark table-striped text-center border border-3 border-dark">
-                          <thead>
-                            <tr>
-                              <th scope="col">ID</th>
-                              <th scope="col">NOMBRE</th>
-                              <th scope="col">CATEGORÍA</th>
-                              <th scope="col">PRECIO</th>
-                              <th scope="col">OPCIONES</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">1</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
-                              <td>
-                                <div class="text-center">
-                                  <button type="button" class="btn btn-outline-info me-3"><ion-icon
-                                      name="create-outline"></ion-icon>
-                                    Edit
-                                  </button>
-                                  <button type="button" class="btn btn-outline-danger me-3"><ion-icon
-                                      name="trash-outline"></ion-icon>
-                                    Delete
-                                  </button>
-                                </div>
-                              </td>
-                            </tr>
-        
-                          </tbody>
-                        </table>
                       </div>
                     </div>
-                </div>
-        
-                <div class="carousel-item">
-                  <h1 class="text-center text-dark p-3 mb-3" data-bs-interval="10000000">Categorías</h1>
-        
-                    <div class="container p-3 bg-cyan border border-3 border-dark rounded-3 bg-white">
-                      <div class="container-fluid mt-4 mb-4 gap-3 d-flex flex-column flex-md-row">
-                        <form class="d-flex col-md-6 col-12" role="search">
-                          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                          <button class="btn btn-outline-success" type="submit">Buscar</button>
-                        </form>
-        
-                        <div class="col-md-5 col-12 d.flex justify-content-center">
-                          <form class="d-flex" role="search-2">
-                            <select class="form-select form-select-lg me-2" aria-label="Ejemplo de .form-select-md">
-                              <option selected>Filtra la lista</option>
-                              <option value="Nombre">Nombre</option>
-                              <option value="Calidad">Calidad</option>
-                              <option value="Provedor">Provedor</option>
-                            </select>
-                            <button class="btn btn-outline-success" type="submit">Filtrar</button>
-                          </form>
-                        </div>
+
+                    <div class="container-fluid mb-4 col-12 gap-4">
+                      <div class="">
+                        <label for="formFile" class="form-label">Importar Respaldos</label>
+                        <input class="form-control" type="file" id="formFile">
                       </div>
 
-                      <div class="container max-vh-100">
-                        <table class="table table-dark table-striped text-center border border-3 border-dark">
-                          <thead>
-                            <tr>
-                              <th scope="col">ID</th>
-                              <th scope="col">NOMBRE</th>
-                              <th scope="col">PROVEDOR</th>
-                              <th scope="col">CALIDAD</th>
-                              <th scope="col">OPCIONES</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">1</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
-                              <td>
-                                <div class="text-center">
-                                  <button type="button" class="btn btn-outline-info me-3"><ion-icon
+                      <div class="mt-4">
+                        <button class="btn btn-primary" id="exportar-1">Exportar Lista</button>
+                      </div>
+                    </div>
+
+                    <div class="container max-vh-100">
+                      <table class="table table-dark table-striped text-center border border-3 border-dark">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">NOMBRE</th>
+                            <th scope="col">CATEGORÍA</th>
+                            <th scope="col">PRECIO</th>
+                            <th scope="col">OPCIONES</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>
+                              <div class="text-center">
+                                <button type="button" class="btn btn-outline-info me-3"><ion-icon
                                     name="create-outline"></ion-icon>
                                   Edit
                                 </button>
@@ -227,17 +186,77 @@
                                     name="trash-outline"></ion-icon>
                                   Delete
                                 </button>
-                                </div>
-                              </td>
-                            </tr>
-        
-                          </tbody>
-                        </table>
+                              </div>
+                            </td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div> -->
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <h1 class="text-center text-dark p-3 mb-3" data-bs-interval="10000000">Categorías</h1>
+
+                  <div class="container p-3 bg-cyan border border-3 border-dark rounded-3 bg-white">
+                    <div class="container-fluid mt-4 mb-4 gap-3 d-flex flex-column flex-md-row">
+                      <form class="d-flex col-md-6 col-12" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                      </form>
+
+                      <div class="col-md-5 col-12 d.flex justify-content-center">
+                        <form class="d-flex" role="search-2">
+                          <select class="form-select form-select-lg me-2" aria-label="Ejemplo de .form-select-md">
+                            <option selected>Filtra la lista</option>
+                            <option value="Nombre">Nombre</option>
+                            <option value="Calidad">Calidad</option>
+                            <option value="Provedor">Provedor</option>
+                          </select>
+                          <button class="btn btn-outline-success" type="submit">Filtrar</button>
+                        </form>
                       </div>
                     </div>
+
+                    <div class="container max-vh-100">
+                      <table class="table table-dark table-striped text-center border border-3 border-dark">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">NOMBRE</th>
+                            <th scope="col">PROVEDOR</th>
+                            <th scope="col">CALIDAD</th>
+                            <th scope="col">OPCIONES</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>
+                              <div class="text-center">
+                                <button type="button" class="btn btn-outline-info me-3"><ion-icon
+                                    name="create-outline"></ion-icon>
+                                  Edit
+                                </button>
+                                <button type="button" class="btn btn-outline-danger me-3"><ion-icon
+                                    name="trash-outline"></ion-icon>
+                                  Delete
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
-        
+
             </div>
           </div>
           <div class="modal-footer">
@@ -264,11 +283,13 @@
               <div id="formularios" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <form class="row g-3 p-4">
+                    <!-- <form class="row g-3 p-4"  id="formulario-producto">
+                      <div id="alerta-container-agregar-producto"></div>
                       <h2 class="text-dark text-center">Productos</h2>
                       <div class="col-md-6">
                         <label for="nombre-producto" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nombre-producto" placeholder="Nombre del Producto...">
+                        <input type="text" class="form-control" id="nombre-producto"
+                          placeholder="Nombre del Producto...">
                       </div>
                       <div class="col-md-6">
                         <label for="categoria" class="form-label">Categoría</label>
@@ -297,6 +318,66 @@
                       <div class="col-xl-2 col-md-12">
                         <label for="cantidad" class="form-label">Cantidad</label>
                         <input type="number" min="0" class="form-control" id="cantidad" placeholder="0">
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                      </div>
+                    </form> -->
+                    <form class="row g-3 p-4" id="formulario-producto" novalidate>
+                      <div id="alerta-container-agregar-producto"></div>
+                      <h2 class="text-dark text-center">Productos</h2>
+                      <div class="col-md-6">
+                        <label for="nombre-producto" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre-producto" placeholder="Nombre del Producto..." required>
+                        <div class="invalid-feedback">
+                          Por favor, ingresa un nombre válido.
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="categoria" class="form-label">Categoría</label>
+                        <input type="text" class="form-control" id="categoria" placeholder="Nombre de la Categoria..." required>
+                        <div class="invalid-feedback">
+                          Por favor, ingresa una categoría válida.
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <label for="presentacion" class="form-label">Presentación</label>
+                        <input type="text" class="form-control" id="presentacion" placeholder="Ejemplo: 500ml" required>
+                        <div class="invalid-feedback">
+                          Por favor, ingresa una presentación válida.
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <label for="descripcion" class="form-label">Descripción</label>
+                        <textarea type="text" class="form-control" id="descripcion" placeholder="Descripción..." required></textarea>
+                        <div class="invalid-feedback">
+                          Por favor, ingresa una descripción válida.
+                        </div>
+                      </div>
+                      <div class="col-xl-6 col-md-8">
+                        <label for="precio" class="form-label">Precio</label>
+                        <input type="number" min="0" class="form-control" id="precio" placeholder="0" required>
+                        <div class="invalid-feedback">
+                          Por favor, ingresa un precio válido.
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-md-4">
+                        <label for="moneda" class="form-label">Moneda</label>
+                        <select id="moneda" class="form-select" required>
+                          <option selected disabled value="">Seleccione una opción</option>
+                          <option>$</option>
+                          <option>Bs</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Por favor, selecciona una moneda válida.
+                        </div>
+                      </div>
+                      <div class="col-xl-2 col-md-12">
+                        <label for="cantidad" class="form-label">Cantidad</label>
+                        <input type="number" min="0" class="form-control" id="cantidad" placeholder="0" required>
+                        <div class="invalid-feedback">
+                          Por favor, ingresa una cantidad válida.
+                        </div>
                       </div>
                       <div class="col-12">
                         <button type="submit" class="btn btn-primary">Ingresar</button>
@@ -344,7 +425,8 @@
   </main>
 
   <footer class="w-100 bg-dark p-4 ">
-    <p class="fs-4 tw-bold text-center m-0 text-light">Copyright © 22/05/2023 | Derechos reservados para RedSack | Visita el repositorio del Proyecto <a href="https://github.com/maikolguerrero/gestion-de-inventario">Aquí</a></p>
+    <p class="fs-4 tw-bold text-center m-0 text-light">Copyright © 22/05/2023 | Derechos reservados para RedSack |
+      Visita el repositorio del Proyecto <a href="https://github.com/maikolguerrero/gestion-de-inventario">Aquí</a></p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -352,6 +434,7 @@
     crossorigin="anonymous"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="js/app.js"></script>
 </body>
 
 </html>
