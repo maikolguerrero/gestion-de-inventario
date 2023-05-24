@@ -7,12 +7,7 @@ const productoAgregado = new Alerta({
         color: "success"
     },
     template: function () {
-        return `<div class="position-fixed top-0 end-0 p-3 m-2">
-            <div class="alert alert-${this.data.color} alert-dismissible fade show" role="alert">
-            ${this.data.mensaje}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-          </div>`;
+        return this.templateAlerta();
     }
 });
 
@@ -23,12 +18,7 @@ const productoEliminado = new Alerta({
         color: "success"
     },
     template: function () {
-        return `<div class="position-fixed top-0 end-0 p-3 m-2">
-            <div class="alert alert-${this.data.color} alert-dismissible fade show" role="alert">
-            ${this.data.mensaje}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-          </div>`;
+        return this.templateAlerta();
     }
 });
 
@@ -39,12 +29,7 @@ const categoriaAgregada = new Alerta({
         color: "success"
     },
     template: function () {
-        return `<div class="position-fixed top-0 end-0 p-3 m-2">
-            <div class="alert alert-${this.data.color} alert-dismissible fade show" role="alert">
-            ${this.data.mensaje}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-          </div>`;
+        return this.templateAlerta();
     }
 });
 
@@ -55,15 +40,87 @@ const categoriaEliminada = new Alerta({
         color: "success"
     },
     template: function () {
-        return `<div class="position-fixed top-0 end-0 p-3 m-2">
-            <div class="alert alert-${this.data.color} alert-dismissible fade show" role="alert">
-            ${this.data.mensaje}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-          </div>`;
+        return this.templateAlerta();
     }
 });
 
-export default { productoAgregado, productoEliminado, categoriaAgregada, categoriaEliminada };
+const inventarioExportado = new Alerta({
+    el: "#alerta-container-inventario-producto",
+    data: {
+        mensaje: "Se han exportado los datos del inventario correctamente.",
+        color: "success"
+    },
+    template: function () {
+        return this.templateAlerta();
+    }
+});
+
+const inventarioImportado = new Alerta({
+    el: "#alerta-container-inventario-producto",
+    data: {
+        mensaje: "Se han importado los datos del inventario correctamente.",
+        color: "success"
+    },
+    template: function () {
+        return this.templateAlerta();
+    }
+});
+
+const inventarioImportado2 = new Alerta({
+    el: "#alerta-container-inventario-categoria",
+    data: {
+        mensaje: "Se han importado los datos del inventario correctamente.",
+        color: "success"
+    },
+    template: function () {
+        return this.templateAlerta();
+    }
+});
+
+const errorLeerJSON = new Alerta({
+    el: "#alerta-container-inventario-producto",
+    data: {
+        mensaje: "Error al leer el archivo JSON.",
+        color: "danger"
+    },
+    template: function () {
+        return this.templateAlerta();
+    }
+});
+
+const errorFaltanDatosJSON = new Alerta({
+    el: "#alerta-container-inventario-producto",
+    data: {
+        mensaje: "El archivo JSON no contiene los datos esperados.",
+        color: "danger"
+    },
+    template: function () {
+        return this.templateAlerta();
+    }
+});
+
+const errorDatosInvalidosJSON = new Alerta({
+    el: "#alerta-container-inventario-producto",
+    data: {
+        mensaje: "El archivo JSON contiene datos inválidos.",
+        color: "danger"
+    },
+    template: function () {
+        return this.templateAlerta();
+    }
+});
+
+export default {
+    productoAgregado,
+    productoEliminado,
+    categoriaAgregada,
+    categoriaEliminada,
+    inventarioExportado,
+    inventarioImportado,
+    inventarioImportado2,
+    errorLeerJSON,
+    errorFaltanDatosJSON,
+    errorDatosInvalidosJSON
+};
 
 
