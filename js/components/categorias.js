@@ -4,20 +4,20 @@ import Component from '../component.js';
 let categorias = JSON.parse(localStorage.getItem('categorias')) || [];
 
 const tablaCategoria = new Component({
-    el: "#tabla-categorias",
-    data: {
-        categorias: categorias,
-    },
-    template: function (props) {
-        if (props.categorias.length < 1) {
-            return `<h2 class="text-center">No hay categorias guardadas actualmente.</h2>`;
-        }
+  el: "#tabla-categorias",
+  data: {
+    categorias: categorias,
+  },
+  template: function (props) {
+    if (props.categorias.length < 1) {
+      return `<h2 class="text-center">No hay categorias guardadas actualmente.</h2>`;
+    }
 
-        let i = 0;
-        let filas = props.categorias
-            .map((categoria, index) => {
-                i++;
-                return `
+    let i = 0;
+    let filas = props.categorias
+      .map((categoria, index) => {
+        i++;
+        return `
             <tr>
               <th scope="row">${i}</th>
               <td>${categoria.nombre}</td>
@@ -37,10 +37,16 @@ const tablaCategoria = new Component({
                 </div>
               </td>
             </tr>`;
-            })
-            .join("");
+      })
+      .join("");
 
-        return `
+    return `
+      <div class="container-fluid mb-4 col-12 gap-4">
+        <div class="mt-4">
+          <button class="btn btn-primary exportar">Exportar Inventario</button>
+        </div>
+      </div>
+
       <div class="container-fluid mt-4 mb-4 gap-3 d-flex flex-column flex-md-row">
       <form class="d-flex col-md-6 col-12" role="search">
         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
@@ -77,7 +83,7 @@ const tablaCategoria = new Component({
         </tbody>
       </table>
     </div>`;
-    }
+  }
 });
 
 export default tablaCategoria;
