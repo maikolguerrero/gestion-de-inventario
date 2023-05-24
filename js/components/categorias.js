@@ -1,31 +1,29 @@
 import Component from '../component.js';
 
-// Buscar productos en el LocalStorage
-let productos = JSON.parse(localStorage.getItem('productos')) || [];
+// Buscar categorias en el LocalStorage
+let categorias = JSON.parse(localStorage.getItem('categorias')) || [];
 
-const tablaProducto = new Component({
-    el: "#tabla-productos",
+const tablaCategoria = new Component({
+    el: "#tabla-categorias",
     data: {
-        productos: productos,
+        categorias: categorias,
     },
     template: function (props) {
-        if (props.productos.length < 1) {
-            return `<h2 class="text-center">No hay productos guardados actualmente.</h2>`;
+        if (props.categorias.length < 1) {
+            return `<h2 class="text-center">No hay categorias guardadas actualmente.</h2>`;
         }
 
         let i = 0;
-        let filas = props.productos
-            .map((producto, index) => {
+        let filas = props.categorias
+            .map((categoria, index) => {
                 i++;
                 return `
             <tr>
               <th scope="row">${i}</th>
-              <td>${producto.nombre}</td>
-              <td>${producto.presentacion}</td>
-              <td>${producto.categoria}</td>
-              <td class="td-wrap">${producto.descripcion}</td>
-              <td>${producto.precio} ${producto.moneda}</td>
-              <td>${producto.cantidad}</td>
+              <td>${categoria.nombre}</td>
+              <td>${categoria.proveedor}</td>
+              <td>${categoria.calidad}</td>
+              <td class="td-wrap">${categoria.descripcion}</td>
               <td>
                 <div class="text-center d-flex justify-content-center">
                   <button type="button" class="btn btn-outline-info me-3">
@@ -43,7 +41,7 @@ const tablaProducto = new Component({
             .join("");
 
         return `
-      <div class="container-fluid mt-4 mb-3 gap-3 d-flex flex-column flex-md-row">
+      <div class="container-fluid mt-4 mb-4 gap-3 d-flex flex-column flex-md-row">
       <form class="d-flex col-md-6 col-12" role="search">
         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
         <button class="btn btn-outline-success" type="submit">Buscar</button>
@@ -62,37 +60,24 @@ const tablaProducto = new Component({
       </div>
     </div>
 
-    <div class="container-fluid mb-4 col-12 gap-4">
-      <div class="">
-        <label for="formFile" class="form-label">Importar Respaldos</label>
-        <input class="form-control" type="file" id="formFile">
-      </div>
-
-      <div class="mt-4">
-        <button class="btn btn-primary" id="exportar-1">Exportar Lista</button>
-      </div>
-    </div>
-
-    <div class="container max-vh-100 table-responsive-xxl">
-      <table class="table table-dark table-striped text-center align-middle border border-3 border-dark">
+    <div class="container max-vh-100">
+      <table class="table table-dark table-striped text-center border border-3 border-dark">
         <thead>
           <tr>
             <th scope="col">#</th>
             <th scope="col">NOMBRE</th>
-            <th scope="col">PRESENTACIÓN</th>
-            <th scope="col">CATEGORÍA</th>
+            <th scope="col">PROVEEDOR</th>
+            <th scope="col">CALIDAD</th>
             <th scope="col">DESCRIPCIÓN</th>
-            <th scope="col">PRECIO</th>
-            <th scope="col">CANTIDAD</th>
             <th scope="col">OPCIONES</th>
           </tr>
         </thead>
-          <tbody>
+        <tbody>
             ${filas}
-          </tbody>
+        </tbody>
       </table>
     </div>`;
     }
 });
 
-export default tablaProducto;
+export default tablaCategoria;
