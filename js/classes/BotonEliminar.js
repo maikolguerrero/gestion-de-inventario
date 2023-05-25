@@ -1,7 +1,7 @@
 import alerta from "../components/alertas.js";
 import tablaProducto from "../components/productos.js";
 import tablaCategoria from "../components/categorias.js";
-import listaCategorias from "../components/listaCategorias.js";
+import listasCategorias from "../components/listaCategorias.js";
 
 class BotonEliminar {
     // Función para manejar el evento de eliminar un producto
@@ -46,7 +46,10 @@ class BotonEliminar {
                     categorias: categoriasActualizadas
                 });
                 // Actualizar la propiedad categoría del componente
-                listaCategorias.setState({
+                listasCategorias.listaCategorias.setState({
+                    categorias: categoriasActualizadas
+                });
+                listasCategorias.listaCategorias2.setState({
                     categorias: categoriasActualizadas
                 });
 

@@ -26,7 +26,7 @@ const tablaCategoria = new Component({
               <td class="td-wrap">${categoria.descripcion}</td>
               <td>
                 <div class="text-center d-flex justify-content-center">
-                  <button type="button" class="btn btn-outline-info me-3">
+                  <button type="button" class="btn btn-outline-info me-3 btn-editar" data-index="${index}">
                     <ion-icon name="create-outline"></ion-icon>
                     Editar
                   </button>
@@ -66,7 +66,7 @@ const tablaCategoria = new Component({
       </div>
     </div>
 
-    <div class="container max-vh-100">
+    <div class="container max-vh-100 table-responsive">
       <table class="table table-dark table-striped text-center border border-3 border-dark">
         <thead>
           <tr>

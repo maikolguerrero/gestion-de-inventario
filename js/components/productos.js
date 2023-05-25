@@ -21,14 +21,14 @@ const tablaProducto = new Component({
             <tr>
               <th scope="row">${i}</th>
               <td>${producto.nombre}</td>
-              <td>${producto.presentacion}</td>
               <td>${producto.categoria}</td>
+              <td>${producto.presentacion}</td>
               <td class="td-wrap">${producto.descripcion}</td>
               <td>${producto.precio} ${producto.moneda}</td>
               <td>${producto.cantidad}</td>
               <td>
                 <div class="text-center d-flex justify-content-center">
-                  <button type="button" class="btn btn-outline-info me-3">
+                  <button type="button" class="btn btn-outline-info me-3 btn-editar" data-index="${index}">
                     <ion-icon name="create-outline"></ion-icon>
                     Editar
                   </button>
@@ -74,8 +74,8 @@ const tablaProducto = new Component({
           <tr>
             <th scope="col">#</th>
             <th scope="col">NOMBRE</th>
-            <th scope="col">PRESENTACIÓN</th>
             <th scope="col">CATEGORÍA</th>
+            <th scope="col">PRESENTACIÓN</th>
             <th scope="col">DESCRIPCIÓN</th>
             <th scope="col">PRECIO</th>
             <th scope="col">CANTIDAD</th>

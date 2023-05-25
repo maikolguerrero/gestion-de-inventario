@@ -1,7 +1,7 @@
 import alertas from "../components/alertas.js";
 import tablaProducto from "../components/productos.js";
 import tablaCategoria from "../components/categorias.js";
-import listaCategorias from "../components/listaCategorias.js";
+import listasCategorias from "../components/listaCategorias.js";
 
 class Backup {
     exportarDatos(event) {
@@ -113,7 +113,10 @@ class Backup {
                         categorias: categoriasImportadas
                     });
 
-                    listaCategorias.setState({
+                    listasCategorias.listaCategorias.setState({
+                        categorias: categoriasImportadas
+                    });
+                    listasCategorias.listaCategorias2.setState({
                         categorias: categoriasImportadas
                     });
 
