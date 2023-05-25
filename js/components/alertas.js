@@ -110,6 +110,28 @@ const errorDatosInvalidosJSON = new Alerta({
     }
 });
 
+const productoActualizado = new Alerta({
+    el: "#alerta-container-inventario-producto",
+    data: {
+        mensaje: "Producto actulizado exitosamente.",
+        color: "success"
+    },
+    template: function () {
+        return this.templateAlerta();
+    }
+});
+
+const categoriaActualizada = new Alerta({
+    el: "#alerta-container-inventario-categoria",
+    data: {
+        mensaje: "Categoría actulizada exitosamente.",
+        color: "success"
+    },
+    template: function () {
+        return this.templateAlerta();
+    }
+});
+
 export default {
     productoAgregado,
     productoEliminado,
@@ -120,7 +142,9 @@ export default {
     inventarioImportado2,
     errorLeerJSON,
     errorFaltanDatosJSON,
-    errorDatosInvalidosJSON
+    errorDatosInvalidosJSON,
+    productoActualizado,
+    categoriaActualizada
 };
 
 

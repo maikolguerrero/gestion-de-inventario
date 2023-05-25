@@ -262,7 +262,7 @@
                         </div>
                       </div>
                       <div class="col-12">
-                        <label for="descripcion" class="form-label">Descripción</label>
+                        <label for="descripcion-categoria" class="form-label">Descripción</label>
                         <textarea class="form-control" id="descripcion-categoria" placeholder="Descripción..."
                           required></textarea>
                         <div class="invalid-feedback">
@@ -289,8 +289,151 @@
     </section>
   </main>
 
+
+
+
+  <!-- Modal Editar Producto -->
+  <div class="modal fade" id="modalEditarProducto" tabindex="-1" role="dialog" aria-labelledby="modalEditarLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-lg-down" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="modalEditarLabel">Editar</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container p-3 bg-$cyan border border-3 border-dark rounded-3 bg-white mb-4">
+            <!-- Formulario Editar Producto-->
+            <form class="row g-3 p-4" id="formulario-editar-producto" novalidate>
+              <h2 class="text-dark text-center">Producto</h2>
+              <div class="col-md-6">
+                <label for="nombre-producto-editar" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre-producto-editar" placeholder="Nombre del Producto..."
+                  required>
+                <div class="invalid-feedback">
+                  Por favor, ingresa un nombre válido.
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div id="lista-categorias2"></div>
+                <div class="invalid-feedback">
+                  Por favor, ingresa una categoría válida.
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="presentacion-editar" class="form-label">Presentación</label>
+                <input type="text" class="form-control" id="presentacion-editar" placeholder="Ejemplo: 500ml" required>
+                <div class="invalid-feedback">
+                  Por favor, ingresa una presentación válida.
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="descripcion-editar" class="form-label">Descripción</label>
+                <textarea class="form-control" id="descripcion-editar" placeholder="Descripción..." required></textarea>
+                <div class="invalid-feedback">
+                  Por favor, ingresa una descripción válida.
+                </div>
+              </div>
+              <div class="col-xl-6 col-md-8">
+                <label for="precio-editar" class="form-label">Precio</label>
+                <input type="number" min="0" class="form-control" id="precio-editar" placeholder="0" required>
+                <div class="invalid-feedback">
+                  Por favor, ingresa un precio válido.
+                </div>
+              </div>
+              <div class="col-xl-4 col-md-4">
+                <label for="moneda-editar" class="form-label">Moneda</label>
+                <select class="form-select" id="moneda-editar" required>
+                  <option selected disabled value="">Seleccione una opción</option>
+                  <option>$</option>
+                  <option>Bs</option>
+                </select>
+                <div class="invalid-feedback">
+                  Por favor, selecciona una moneda válida.
+                </div>
+              </div>
+              <div class="col-xl-2 col-md-12">
+                <label for="cantidad-editar" class="form-label">Cantidad</label>
+                <input type="number" min="0" class="form-control" id="cantidad-editar" placeholder="0" required>
+                <div class="invalid-feedback">
+                  Por favor, ingresa una cantidad válida.
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-secondary">Guardar Cambios</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Editar Categoria -->
+  <div class="modal fade" id="modalEditarCategoria" tabindex="-1" role="dialog"
+    aria-labelledby="modalEditarCategoriaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-lg-down" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="modalCategoriaEditarLabel">Editar</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container p-3 bg-$cyan border border-3 border-dark rounded-3 bg-white mb-4">
+            <!-- Formulario Editar Categoría -->
+            <form class="row g-3 p-4" id="formulario-editar-categoria" novalidate>
+              <h2 class="text-dark text-center">Categoría</h2>
+              <div class="col-md-6">
+                <label for="nombre-categoria-editar" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre-categoria-editar" placeholder="Ingrese el Nombre"
+                  required>
+                <div class="invalid-feedback">
+                  Por favor, ingresa un nombre válido.
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="proveedor-editar" class="form-label">Proveedor</label>
+                <input type="text" class="form-control" id="proveedor-editar" placeholder="Ejemplo: Samsung" required>
+                <div class="invalid-feedback">
+                  Por favor, ingresa un proveedor válido.
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="calidad-editar" class="form-label">Calidad</label>
+                <input type="text" class="form-control" id="calidad-editar" placeholder="Calidad de los productos..."
+                  required>
+                <div class="invalid-feedback">
+                  Por favor, ingresa una calidad válida.
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="descripcion-categoria-editar" class="form-label">Descripción</label>
+                <textarea class="form-control" id="descripcion-categoria-editar" placeholder="Descripción..."
+                  required></textarea>
+                <div class="invalid-feedback">
+                  Por favor, ingresa una descripción válida.
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+              </div>
+            </form>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="w-100 bg-dark p-4 ">
-    <p class="fs-4 tw-bold text-center m-0 text-light">Copyright © 22/05/2023 | Derechos reservados para RedSack |
+    <p class="fs-4 tw-bold text-center m-0 text-light">Copyright © 22/05/2023 | Derechos reservados para
+      RedSack |
       Visita el repositorio del Proyecto <a href="https://github.com/maikolguerrero/gestion-de-inventario">Aquí</a></p>
   </footer>
 
